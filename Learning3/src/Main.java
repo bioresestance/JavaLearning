@@ -22,10 +22,8 @@ public class Main {
 					currPrime = Math.max(i, j);
 				}
 			}
-		}	
-		
-		if( currPrime == number) return number;
-		
+		}			
+		if( currPrime == number) return number;		
 		// If new prime can be broken down again.
 		temp = getLargestPrime(currPrime);
 		if( temp >= 2 ) {
