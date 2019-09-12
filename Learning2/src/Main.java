@@ -14,13 +14,18 @@ public class Main {
 			System.out.println("Nope");
 		}
 		
-		boolean test = (Character == '0') ? true : false;
+		boolean test = (testMethod() == true) ? true : false;
 		
 		if(test) {
 			System.out.println("Yup again");
 		} else {
 			System.out.println("Nope Again");
 		}
+	}
+	
+	private static boolean testMethod( ) {
+		
+		return true;
 	}
 
 }
