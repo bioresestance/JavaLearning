@@ -1,8 +1,9 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		int number = 7;
+		int number = getUserInputs();
 		System.out.println("Largest prime of " + number + " is " + getLargestPrime(number));
 	}
 	
@@ -32,6 +33,31 @@ public class Main {
 			largestPrime = currPrime;
 		}		
 		return largestPrime;	
+	}
+	
+	public static int getUserInputs() {
+		
+		Scanner scanner = new Scanner(System.in);
+		int count = 0;
+		int sum = 0;
+		
+		System.out.println("Please Enter 10 numbers into the Console: ");
+		
+		while( count < 10 ) {
+			
+			System.out.println("Enter number #" + count);
+			if( scanner.hasNextInt() ) {
+				sum += scanner.nextInt();
+				count++;
+			} else {
+				System.out.println("Invalid Number");
+			}
+			scanner.nextLine();
+			
+		}
+		scanner.close();
+		System.out.println( "Total Sum is " + sum );
+		return sum;
 	}
 	
 }
